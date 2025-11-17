@@ -25,6 +25,14 @@ export default [
     },
     rules: {
       ...tseslint.rules.recommended,
+      'no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          args: 'none',
+          ignoreRestSiblings: true,
+        },
+      ],
       'prettier/prettier': 'error',
       '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
       '@typescript-eslint/consistent-type-assertions': 'error',
@@ -36,7 +44,6 @@ export default [
       '@typescript-eslint/no-unsafe-assignment': 'error',
       '@typescript-eslint/no-unsafe-call': 'error',
       '@typescript-eslint/no-unsafe-member-access': 'error',
-      '@typescript-eslint/no-unused-vars': ['error', { args: 'all', argsIgnorePattern: '^_' }],
       '@typescript-eslint/strict-boolean-expressions': [
         'error',
         {
